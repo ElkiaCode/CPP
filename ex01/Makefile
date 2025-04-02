@@ -15,8 +15,8 @@ EXE = PhoneBook
 
 # Files
 SRC =			main.cpp \
-				PhoneBook.cpp \
-				Contact.cpp \
+				PhoneBook.class.cpp \
+				Contact.class.cpp \
 
 
 SOURCES =		${SRC}
