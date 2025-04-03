@@ -49,13 +49,13 @@ int oldest_entries(Contact contacts[8])
     return (oldest);
 }
 
-PhoneBook::PhoneBook(void)
+PhoneBook::PhoneBook()
 {
     this->count_entries = 0;
     return;
 }
 
-PhoneBook::~PhoneBook(void)
+PhoneBook::~PhoneBook()
 {
     return;
 }
