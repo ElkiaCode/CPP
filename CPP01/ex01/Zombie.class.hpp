@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/05 12:33:16 by cparodi           #+#    #+#             */
-/*   Updated: 2025/04/05 12:35:58 by cparodi          ###   ########.fr       */
+/*   Created: 2025/04/05 12:36:24 by cparodi           #+#    #+#             */
+/*   Updated: 2025/04/05 12:36:25 by cparodi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include <iostream>
 #include <string>
 #include <limits>
+#include <sstream>
+#include <cstdlib>
 
 class Zombie
 {
@@ -22,9 +24,11 @@ class Zombie
         std::string name_;
     public:
         Zombie(std::string name_);
+        Zombie( void );
         ~Zombie();
-        void announce(void);
+        void    announce(void);
+        void    name_it(std::string name, int i);
+
 };
-Zombie *newZombie(std::string name);
-void randomChump();
+Zombie  *zombieHorde( int N, std::string name );
 #endif

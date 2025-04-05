@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.class.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/05 12:34:02 by cparodi           #+#    #+#             */
-/*   Updated: 2025/04/05 12:35:37 by cparodi          ###   ########.fr       */
+/*   Created: 2025/04/05 12:36:39 by cparodi           #+#    #+#             */
+/*   Updated: 2025/04/05 14:52:32 by cparodi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.class.hpp"
+#include "HumanA.class.hpp"
+#include "Weapon.class.hpp"
 
-int main()
+HumanA::HumanA(std::string name, Weapon &Weapon) : name_(name), Weapon_(Weapon)
 {
-    Zombie *FirstNewZombie;
+	std::cout << name_ << " join the battle!" << std::endl;
+	return;
+}
 
-    FirstNewZombie = newZombie("New Zombie");
-    FirstNewZombie->announce();
-    randomChump();
-    delete FirstNewZombie;
-    return (0);
+HumanA::~HumanA()
+{
+	std::cout << name_ << " is falling back!" << std::endl;
+	return;
+}
+
+void HumanA::attack()
+{
+	std::cout << name_ << " attacks with their " << Weapon_.getType() << std::endl;
+	return;
 }
