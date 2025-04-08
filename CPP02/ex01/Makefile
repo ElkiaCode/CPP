@@ -6,12 +6,12 @@
 #    By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 09:30:05 by cparodi           #+#    #+#              #
-#    Updated: 2025/04/08 15:56:58 by cparodi          ###   ########.fr        #
+#    Updated: 2025/04/08 16:42:17 by cparodi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Program Executable
-EXE = Mon_premier_canon
+EXE = Premiers_pas_vers_une_classe_utile
 
 # Files
 SRC =		main.cpp \
@@ -47,7 +47,7 @@ all:		${EXE}
 
 ${EXE}:		${OBJECTS}
 		@${CC} ${CFLAGS} ${OBJECTS} -o ${EXE}
-		@echo "\n\n${GREEN}[✓] - ${_GREEN}Mon premier canon${GREEN} Successfully Compiled!${RESET}"
+		@echo "\n\n${GREEN}[✓] - ${_GREEN}Premiers pas vers une classe utile${GREEN} Successfully Compiled!${RESET}"
 
 %.o:		%.cpp
 		@${eval FILE_COUNT = ${shell expr ${FILE_COUNT} + 1}}
@@ -59,7 +59,7 @@ ${EXE}:		${OBJECTS}
 
 clean:
 		@${RM} ${OBJECTS}
-		@echo "${WHITE}[!] - ${_WHITE}Mon premier canon${WHITE} Successfully Cleaned!${RESET}"
+		@echo "${WHITE}[!] - ${_WHITE}Premiers pas vers une classe utile${WHITE} Successfully Cleaned!${RESET}"
 
 fclean: clean
 		@${RM} ${OBJECTS} ${EXE}
