@@ -6,7 +6,7 @@
 /*   By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 11:08:12 by cparodi           #+#    #+#             */
-/*   Updated: 2025/04/08 12:20:45 by cparodi          ###   ########.fr       */
+/*   Updated: 2025/04/11 13:11:47 by cparodi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 std::string replace_all(std::string content_file, std::string s1, std::string s2)
 {
+	if (s1.empty())
+		return ("");
+
 	size_t pos = 0;
 
 	while ((pos = content_file.find(s1, pos)) != std::string::npos)
@@ -50,7 +53,6 @@ int main(int ac, char **av)
 		std::cout << "bad entry number" << std::endl;
 		return (1);
 	}
-	
 	std::string filename = av[1];
 	std::string s1 = av[2];
 	std::string s2 = av[3];
