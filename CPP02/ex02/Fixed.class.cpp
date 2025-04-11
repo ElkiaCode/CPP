@@ -6,7 +6,7 @@
 /*   By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 14:11:41 by cparodi           #+#    #+#             */
-/*   Updated: 2025/04/08 17:06:26 by cparodi          ###   ########.fr       */
+/*   Updated: 2025/04/11 12:44:44 by cparodi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,6 +125,63 @@ bool Fixed::operator!=(const Fixed &other) const
 	return (this->toFloat() != other.toFloat());
 }
 
+Fixed &Fixed::operator++()
+{
+	n++;
+	return (*this);
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed temp = *this;
+	n++;
+	return (temp);
+}
+
+Fixed &Fixed::operator--()
+{
+	n--;
+	return (*this);
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed temp = *this;
+	n--;
+	return (temp);
+}
+
+Fixed &Fixed::min(Fixed &a, Fixed &b)
+{
+	if (a < b)
+		return (a);
+	else
+		return (b);
+}
+
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
+{
+	if (a < b)
+		return (a);
+	else
+		return (b);
+}
+
+Fixed &Fixed::max(Fixed &a, Fixed &b)
+{
+	if (a > b)
+		return (a);
+	else
+		return (b);
+}
+
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
+{
+	if (a > b)
+		return (a);
+	else
+		return (b);
+}
 
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
 {
