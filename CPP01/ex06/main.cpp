@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.class.cpp                                   :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/05 12:36:54 by cparodi           #+#    #+#             */
-/*   Updated: 2025/04/17 08:51:20 by cparodi          ###   ########.fr       */
+/*   Created: 2025/04/08 12:27:25 by cparodi           #+#    #+#             */
+/*   Updated: 2025/04/11 13:14:11 by cparodi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.class.hpp"
+#include "Harl.class.hpp"
 
-const std::string &Weapon::getType()
+int main()
 {
-	const std::string &type = type_;
-	return (type);
-}
+	Harl Harl;
+	std::string entry;
 
-void Weapon::setType(std::string type)
-{
-	this->type_ = type;
-	return;
-}
-
-Weapon::Weapon(std::string type)
-{
-	this->type_ = type;
-	return;
-}
-
-Weapon::~Weapon()
-{
-	return;
+	while (1)
+	{
+		std::cout << "Enter complain :";
+		if (!(std::getline(std::cin, entry)))
+		{
+			std::cout << "Entry Error!" << std::endl;
+			break;
+		}
+		else
+			Harl.complain(entry);
+	}
+	return (0);
 }

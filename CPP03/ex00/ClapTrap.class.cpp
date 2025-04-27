@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.class.cpp                                   :+:      :+:    :+:   */
+/*   ClapTrap.class.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/05 12:36:54 by cparodi           #+#    #+#             */
-/*   Updated: 2025/04/17 08:51:20 by cparodi          ###   ########.fr       */
+/*   Created: 2025/04/17 09:02:41 by cparodi           #+#    #+#             */
+/*   Updated: 2025/04/17 09:16:58 by cparodi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.class.hpp"
+#include "ClapTrap.class.hpp"
 
-const std::string &Weapon::getType()
+ClapTrap::ClapTrap(std::string name) : Life_(10), Energy_(10), Attack_(0)
 {
-	const std::string &type = type_;
-	return (type);
-}
-
-void Weapon::setType(std::string type)
-{
-	this->type_ = type;
+	this->Name_ = name;
+	std::cout << "constructor call for : " << Name_ << std::endl;
 	return;
 }
 
-Weapon::Weapon(std::string type)
+ClapTrap::~ClapTrap()
 {
-	this->type_ = type;
+	std::cout << "destructor call for : " << Name_ << std::endl;
 	return;
 }
 
-Weapon::~Weapon()
+void ClapTrap::attack(const std::string &target)
 {
-	return;
+	
 }

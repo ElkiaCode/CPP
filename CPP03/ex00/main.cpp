@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.class.cpp                                   :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/05 12:36:54 by cparodi           #+#    #+#             */
-/*   Updated: 2025/04/17 08:51:20 by cparodi          ###   ########.fr       */
+/*   Created: 2025/04/17 09:02:18 by cparodi           #+#    #+#             */
+/*   Updated: 2025/04/17 09:13:37 by cparodi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.class.hpp"
+#include "ClapTrap.class.hpp"
 
-const std::string &Weapon::getType()
+int main()
 {
-	const std::string &type = type_;
-	return (type);
-}
-
-void Weapon::setType(std::string type)
-{
-	this->type_ = type;
-	return;
-}
-
-Weapon::Weapon(std::string type)
-{
-	this->type_ = type;
-	return;
-}
-
-Weapon::~Weapon()
-{
-	return;
+	ClapTrap ClapTrap("steve");
+	
 }
