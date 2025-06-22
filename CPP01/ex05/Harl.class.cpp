@@ -6,7 +6,7 @@
 /*   By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:29:23 by cparodi           #+#    #+#             */
-/*   Updated: 2025/04/17 11:31:01 by cparodi          ###   ########.fr       */
+/*   Updated: 2025/06/22 14:27:13 by cparodi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void Harl::debug()
 
 void Harl::info()
 {
-	std::cout << "J’ai remarqué que ma plante dans le salon me regarde d’un air suspect. Je suis peut-être juste parano, mais je vais l'arroser quand même." << std::endl;
+	std::cout << "J'ai remarqué que ma plante dans le salon me regarde d'un air suspect. Je suis peut-être juste parano, mais je vais l'arroser quand même." << std::endl;
 	return;
 }
 
@@ -32,7 +32,7 @@ void Harl::warning()
 
 void Harl::error()
 {
-	std::cout << "J'ai perdu ma télécommande sous le canapé. C’est plus qu’une erreur, c’est un crime contre l'humanité. Help!" << std::endl;
+	std::cout << "J'ai perdu ma télécommande sous le canapé. C'est plus qu'une erreur, c'est un crime contre l'humanité. Help!" << std::endl;
 	return;
 }
 
