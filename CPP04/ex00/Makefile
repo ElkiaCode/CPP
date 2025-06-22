@@ -6,16 +6,17 @@
 #    By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 09:30:05 by cparodi           #+#    #+#              #
-#    Updated: 2025/06/22 17:24:34 by cparodi          ###   ########.fr        #
+#    Updated: 2025/04/08 16:42:17 by cparodi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Program Executable
-EXE = Serena,_my_love!
+EXE = Aaaaand..._OPEN!
 
 # Files
 SRC =		main.cpp \
 			ClapTrap.cpp \
+
 
 SOURCES =		${SRC}
 OBJECTS =		${SOURCES:.cpp=.o}
@@ -46,7 +47,7 @@ all:		${EXE}
 
 ${EXE}:		${OBJECTS}
 		@${CC} ${CFLAGS} ${OBJECTS} -o ${EXE}
-		@echo "\n\n${GREEN}[✓] - ${_GREEN}Serena, my love!${GREEN} Successfully Compiled!${RESET}"
+		@echo "\n\n${GREEN}[✓] - ${_GREEN}Aaaaand... OPEN!${GREEN} Successfully Compiled!${RESET}"
 
 %.o:		%.cpp
 		@${eval FILE_COUNT = ${shell expr ${FILE_COUNT} + 1}}
@@ -58,7 +59,7 @@ ${EXE}:		${OBJECTS}
 
 clean:
 		@${RM} ${OBJECTS}
-		@echo "${WHITE}[!] - ${_WHITE}Serena, my love!${WHITE} Successfully Cleaned!${RESET}"
+		@echo "${WHITE}[!] - ${_WHITE}Aaaaand... OPEN!${WHITE} Successfully Cleaned!${RESET}"
 
 fclean: clean
 		@${RM} ${OBJECTS} ${EXE}
