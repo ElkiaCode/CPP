@@ -6,12 +6,12 @@
 #    By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 09:30:05 by cparodi           #+#    #+#              #
-#    Updated: 2025/06/29 03:02:10 by cparodi          ###   ########.fr        #
+#    Updated: 2025/06/29 07:48:43 by cparodi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Program Executable
-EXE = Polymorphisme
+EXE = I_don_t_wanna_burn_it_the_world
 
 # Files
 SRC =		main.cpp \
@@ -20,6 +20,7 @@ SRC =		main.cpp \
 			Cat.cpp \
 			WrongAnimal.cpp \
 			WrongCat.cpp \
+			Brain.cpp \
 
 
 SOURCES =		${SRC}
@@ -41,7 +42,7 @@ GREEN		= \e[0;1;32m
 _GREEN		= \e[1;4;32m
 
 FILE_COUNT	= 0
-FILE_TOTAL	= 6
+FILE_TOTAL	= 7
 BAR_SIZE	= ${shell expr 100 \* ${FILE_COUNT} / ${FILE_TOTAL}}
 BAR_LOAD	= ${shell expr 23 \* ${FILE_COUNT} / ${FILE_TOTAL}}
 BAR_REST	= ${shell expr 23 - ${BAR_LOAD}}
@@ -51,7 +52,7 @@ all:		${EXE}
 
 ${EXE}:		${OBJECTS}
 		@${CC} ${CFLAGS} ${OBJECTS} -o ${EXE}
-		@echo "\n\n${GREEN}[✓] - ${_GREEN}Polymorphisme${GREEN} Successfully Compiled!${RESET}"
+		@echo "\n\n${GREEN}[✓] - ${_GREEN}I don t wanna burn it the world${GREEN} Successfully Compiled!${RESET}"
 
 %.o:		%.cpp
 		@${eval FILE_COUNT = ${shell expr ${FILE_COUNT} + 1}}
@@ -63,7 +64,7 @@ ${EXE}:		${OBJECTS}
 
 clean:
 		@${RM} ${OBJECTS}
-		@echo "${WHITE}[!] - ${_WHITE}Polymorphisme${WHITE} Successfully Cleaned!${RESET}"
+		@echo "${WHITE}[!] - ${_WHITE}I don t wanna burn it the world${WHITE} Successfully Cleaned!${RESET}"
 
 fclean: clean
 		@${RM} ${OBJECTS} ${EXE}
