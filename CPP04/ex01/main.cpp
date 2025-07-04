@@ -7,7 +7,7 @@
 
 int main()
 {
-	std::cout << "---- CONSTRUCTION ----" << std::endl;
+	std::cout << " CONSTRUCTION " << std::endl;
 
 	const int size = 4;
 	Animal* animals[size];
@@ -18,15 +18,15 @@ int main()
 	for (int i = size / 2; i < size; ++i)
 		animals[i] = new Cat();
 
-	std::cout << "\n---- DESTRUCTION ----" << std::endl;
+	std::cout << "\n DESTRUCTION " << std::endl;
 	for (int i = 0; i < size; ++i)
 		delete animals[i];
 
-	std::cout << "\n---- COPY TEST ----" << std::endl;
+	std::cout << "\n COPY TEST " << std::endl;
 
 	Dog original;
 	Dog copy(original);
 
-	std::cout << "\n---- END ----" << std::endl;
-	return 0;
+	std::cout << "\n END " << std::endl;
+	return (0);
 }
