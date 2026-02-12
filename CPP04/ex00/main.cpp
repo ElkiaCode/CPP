@@ -6,12 +6,12 @@
 
 int main()
 {
-	std::cout << " CONSTRUCTION " << std::endl;
+	std::cout << " CONSTRUCTOR " << std::endl;
 	const Animal* meta = new Animal();
 	const Animal* dog = new Dog();
 	const Animal* cat = new Cat();
 
-	std::cout << "\n TYPES " << std::endl;
+	std::cout << "\n TYPE " << std::endl;
 	std::cout << "Dog type: " << dog->getType() << std::endl;
 	std::cout << "Cat type: " << cat->getType() << std::endl;
 	std::cout << "Animal type: " << meta->getType() << std::endl;
@@ -32,7 +32,7 @@ int main()
 	wrongAnimal->makeSound();
 	wrongCat->makeSound();
 
-	std::cout << "\n DESTRUCTION " << std::endl;
+	std::cout << "\n DESTRUCTOR " << std::endl;
 	delete meta;
 	delete dog;
 	delete cat;

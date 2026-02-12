@@ -6,16 +6,15 @@
 #    By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 09:30:05 by cparodi           #+#    #+#              #
-#    Updated: 2025/06/29 07:48:43 by cparodi          ###   ########.fr        #
+#    Updated: 2026/02/12 07:42:12 by cparodi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Program Executable
-EXE = Identify
+EXE = Array
 
 # Files
 SRC =		main.cpp \
-			Identifier.cpp \
 
 
 
@@ -38,7 +37,7 @@ GREEN		= \e[0;1;32m
 _GREEN		= \e[1;4;32m
 
 FILE_COUNT	= 0
-FILE_TOTAL	= 2
+FILE_TOTAL	= 1
 BAR_SIZE	= ${shell expr 100 \* ${FILE_COUNT} / ${FILE_TOTAL}}
 BAR_LOAD	= ${shell expr 23 \* ${FILE_COUNT} / ${FILE_TOTAL}}
 BAR_REST	= ${shell expr 23 - ${BAR_LOAD}}
@@ -48,7 +47,7 @@ all:		${EXE}
 
 ${EXE}:		${OBJECTS}
 		@${CC} ${CFLAGS} ${OBJECTS} -o ${EXE}
-		@echo "\n\n${GREEN}[✓] - ${_GREEN}Identify real type${GREEN} Successfully Compiled!${RESET}"
+		@echo "\n\n${GREEN}[✓] - ${_GREEN}Array${GREEN} Successfully Compiled!${RESET}"
 
 %.o:		%.cpp
 		@${eval FILE_COUNT = ${shell expr ${FILE_COUNT} + 1}}
@@ -60,7 +59,7 @@ ${EXE}:		${OBJECTS}
 
 clean:
 		@${RM} ${OBJECTS}
-		@echo "${WHITE}[!] - ${_WHITE}Identify real type${WHITE} Successfully Cleaned!${RESET}"
+		@echo "${WHITE}[!] - ${_WHITE}Array${WHITE} Successfully Cleaned!${RESET}"
 
 fclean: clean
 		@${RM} ${OBJECTS} ${EXE}
