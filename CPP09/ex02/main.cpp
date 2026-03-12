@@ -23,8 +23,8 @@ int main(int ac, char **av)
             clock_t endForDeque = clock();
             p.printResult();
 
-            std::cout << "Time for vector: " << (double)(endForVector - startForVector) / CLOCKS_PER_SEC * 1000000 << " us" << std::endl;
-            std::cout << "Time for deque: " << (double)(endForDeque - startForDeque) / CLOCKS_PER_SEC * 1000000 << " us" << std::endl;
+            std::cout << "Time for std::vector: " << (double)(endForVector - startForVector) / CLOCKS_PER_SEC * 1000000 << " us" << std::endl;
+            std::cout << "Time for std::deque: " << (double)(endForDeque - startForDeque) / CLOCKS_PER_SEC * 1000000 << " us" << std::endl;
         }
     }
     catch(const std::exception& e)

@@ -13,7 +13,7 @@ void PmergeMe::parsing(char **av)
         for (size_t j = 0; j < str.size(); j++)
         {
             if (!std::isdigit(str[j]))
-                throw std::runtime_error("only digit");
+                throw std::runtime_error("only positive digit");
         }
         long num = std::atol(av[i]);
 
