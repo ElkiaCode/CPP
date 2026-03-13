@@ -16,7 +16,7 @@ int RPN::calcul(const std::string &polish)
         else if (token == "+" || token == "-" || token == "*" || token == "/")
         {
             if (stack.size() < 2)
-                throw std::runtime_error("not enough digit");
+                throw std::runtime_error("wrong Polish expression");
             int x = stack.top();
             stack.pop();
             int y = stack.top();

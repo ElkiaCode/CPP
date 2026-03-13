@@ -6,12 +6,12 @@
 #    By: cparodi <cparodi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 09:30:05 by cparodi           #+#    #+#              #
-#    Updated: 2026/03/03 18:35:27 by cparodi          ###   ########.fr        #
+#    Updated: 2026/03/03 18:35:20 by cparodi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Program Executable
-EXE = Iter
+EXE = whatever
 
 # Files
 SRC =		main.cpp \
@@ -47,7 +47,7 @@ all:		${EXE}
 
 ${EXE}:		${OBJECTS}
 		@${CC} ${CFLAGS} ${OBJECTS} -o ${EXE}
-		@echo "\n\n${GREEN}[✓] - ${_GREEN}Iter${GREEN} Successfully Compiled!${RESET}"
+		@echo "\n\n${GREEN}[✓] - ${_GREEN}whatever${GREEN} Successfully Compiled!${RESET}"
 
 %.o:		%.cpp
 		@${eval FILE_COUNT = ${shell expr ${FILE_COUNT} + 1}}
@@ -59,7 +59,7 @@ ${EXE}:		${OBJECTS}
 
 clean:
 		@${RM} ${OBJECTS}
-		@echo "${WHITE}[!] - ${_WHITE}Iter${WHITE} Successfully Cleaned!${RESET}"
+		@echo "${WHITE}[!] - ${_WHITE}whatever${WHITE} Successfully Cleaned!${RESET}"
 
 fclean: clean
 		@${RM} ${OBJECTS} ${EXE}

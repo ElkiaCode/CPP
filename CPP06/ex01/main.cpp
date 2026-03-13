@@ -3,7 +3,7 @@
 int main()
 {
     Data data;
-    data.value = 42;
+    data.value = 852;
 
     uintptr_t r = Serializer::serialize(&data);
     Data *p = Serializer::deserialize(r);

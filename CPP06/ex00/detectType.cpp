@@ -2,15 +2,20 @@
 
 static bool isInt(const std::string &s)
 {
+    if (s.empty())
+        return false;
+
     size_t i = 0;
+    if (s[0] == '+' || s[0] == '-')
+        i++;
 
     if (i == s.length())
         return false;
-    while (i < s.length())
+
+    for (; i < s.length(); i++)
     {
         if (!std::isdigit(s[i]))
             return false;
-        i++;
     }
     return true;
 }

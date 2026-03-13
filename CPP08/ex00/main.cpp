@@ -11,7 +11,7 @@ int main()
     try
     {
         std::cout << "Vector test: ";
-        std::cout << easyFind(v, 20) << std::endl;
+        std::cout << easyFind(v, 19) << std::endl;
     }
     catch (const std::exception &e)
     {
@@ -26,7 +26,7 @@ int main()
     try
     {
         std::cout << "List test: ";
-        std::cout << easyFind(l, 5) << std::endl;
+        std::cout << easyFind(l, 3) << std::endl;
     }
     catch (const std::exception &e)
     {

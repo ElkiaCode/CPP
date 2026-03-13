@@ -7,26 +7,52 @@
 
 int main()
 {
-    Intern someRandomIntern;
+    try
+    {
+        std::srand(std::time(NULL));
 
-    AForm *form1 = someRandomIntern.makeForm("shrubbery creation", "Garden");
-    if (form1)
-        std::cout << *form1 << std::endl;
-    delete form1;
+        Bureaucrat bob("Bob", 1);
+        Bureaucrat john("didier", 150);
 
-    AForm *form2 = someRandomIntern.makeForm("robotomy request", "Bender");
-    if (form2)
-        std::cout << *form2 << std::endl;
-    delete form2;
+        Intern someRandomIntern;
 
-    AForm *form3 = someRandomIntern.makeForm("presidential pardon", "Alice");
-    if (form3)
-        std::cout << *form3 << std::endl;
-    delete form3;
+        AForm* f1 = someRandomIntern.makeForm("shrubbery creation", "Home");
+        AForm* f2 = someRandomIntern.makeForm("robotomy request", "slender");
+        AForm* f3 = someRandomIntern.makeForm("presidential pardon", "pepe the frog");
 
-    AForm *form4 = someRandomIntern.makeForm("wrong name", "Nobody");
-    if (!form4)
-        std::cout << "No forms created" << std::endl;
+        std::cout << std::endl;
 
-    return (0);
+        std::cout << *f1 << std::endl;
+        std::cout << *f2 << std::endl;
+        std::cout << *f3 << std::endl;
+
+        std::cout << std::endl;
+
+        john.signForm(*f1);
+        bob.signForm(*f1);
+        bob.signForm(*f2);
+        bob.signForm(*f3);
+
+        std::cout << std::endl;
+
+        std::cout << *f1 << std::endl;
+        std::cout << *f2 << std::endl;
+        std::cout << *f3 << std::endl;
+
+        std::cout << std::endl;
+
+        f1->execute(bob);
+        f2->execute(bob);
+        f3->execute(bob);
+
+        delete f1;
+        delete f2;
+        delete f3;
+    }
+    catch (std::exception &e)
+    {
+        std::cerr << "Exception: " << e.what() << std::endl;
+    }
+
+    return 0;
 }

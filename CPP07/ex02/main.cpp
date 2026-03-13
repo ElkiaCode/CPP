@@ -1,53 +1,41 @@
 #include <iostream>
 #include "Array.hpp"
 
-#define MAX_VAL 750
-int main(int, char**)
+int main()
 {
-    Array<int> numbers(MAX_VAL);
-    int* mirror = new int[MAX_VAL];
-    srand(time(NULL));
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        const int value = rand();
-        numbers[i] = value;
-        mirror[i] = value;
-    }
-    //SCOPE
-    {
-        Array<int> tmp = numbers;
-        Array<int> test(tmp);
-    }
+    const int size = 5;
 
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        if (mirror[i] != numbers[i])
-        {
-            std::cerr << "didn't save the same value!!" << std::endl;
-            return 1;
-        }
-    }
+    Array<int> arr(size);
+
+    for (int i = 0; i < size; i++)
+        arr[i] = i * 10;
+
+    std::cout << "Array elements:" << std::endl;
+    for (int i = 0; i < size; i++)
+        std::cout << arr[i] << std::endl;
+
+    Array<int> copy(arr);
+    copy[0] = 999;
+
+    std::cout << "Original first element after modifying copy: " << arr[0] << std::endl;
+
     try
     {
-        numbers[-2] = 0;
+        arr[-1] = 0;
     }
-    catch(const std::exception& e)
+    catch (const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
-    }
-    try
-    {
-        numbers[MAX_VAL] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what() << std::endl;
     }
 
-    for (int i = 0; i < MAX_VAL; i++)
+    try
     {
-        numbers[i] = rand();
+        arr[size] = 0;
     }
-    delete [] mirror;//
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+
     return 0;
 }

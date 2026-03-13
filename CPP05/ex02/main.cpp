@@ -29,8 +29,8 @@ int main()
         Bureaucrat alice("Alice", 150);
         std::cout << "\n--- Test grades too low ---\n";
         ShrubberyCreationForm shrub2("garden");
-        alice.signForm(shrub2);           // doit lancer exception
-        alice.executeForm(shrub2);        // doit lancer exception
+        alice.signForm(shrub2);
+        alice.executeForm(shrub2);
     }
     catch(const std::exception &e)
     {

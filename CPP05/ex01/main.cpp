@@ -11,7 +11,7 @@ int main()
         std::cout << bob << std::endl;
 
         std::cout << "\n--- Creating a Form ---\n";
-        Form taxForm("Tax Declaration", 60, 30);
+        Form taxForm("Tax Declaration", 60, 60);
 
         std::cout << taxForm << std::endl;
 
