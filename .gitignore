@@ -1,0 +1,8 @@
+*.o
+*.d
+.vscode/
+*:Zone.Identifier
+# compiled exercise binaries
+CPP00/ex00/megaphone
+CPP00/ex01/PhoneBook
+CPP01/ex04/Sed_is_for_losers
